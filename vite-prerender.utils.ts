@@ -49,5 +49,7 @@ export const extractRoutesToPrerender = () => {
   routes.splice(slugRouteIndex, 1);
   // add all content routes
   routes.push(...slugRoutes);
+
+  console.log({ routes });
   return routes;
 };

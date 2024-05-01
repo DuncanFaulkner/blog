@@ -26,9 +26,8 @@ import { SocialMediaComponent } from '../components/social-media/social-media.co
         But that's not all! I also enjoy sharing my knowledge and enthusiasm
         with the Angular community. I co-organize the , where we host awesome
         speakers and events. And sometimes, I get to be one of those speakers
-        myself! I've spoken at the meetup as well as
-        <a href="https://ng-conf.org/" target="_blank">ng-conf</a> about Angular
-        topics, and I always have a blast doing it.
+        myself! I've spoken at the meetup as well as about Angular topics, and I
+        always have a blast doing it.
       </p>
       <p>
         If you want to know more about me or my work, feel free to contact me
@@ -38,7 +37,7 @@ import { SocialMediaComponent } from '../components/social-media/social-media.co
     </section>
     <section class="recent-posts">
       <h3>Latest Post</h3>
-      <blog-recent-posts count="1" />
+      <blog-recent-posts [count]="1" />
       <a href="/blog" class="linkbtn">See All Posts</a>
     </section>
   `,

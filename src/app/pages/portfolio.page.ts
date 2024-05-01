@@ -1,4 +1,4 @@
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { of } from 'rxjs';
 import { PageHeaderComponent } from '../components/page-header/page-header.component';
@@ -12,8 +12,6 @@ import { ContentService } from '../services/content.service';
   imports: [
     PageHeaderComponent,
     AsyncPipe,
-    NgForOf,
-    NgIf,
     PreviewCardComponent,
     ImagePipe,
     PillComponent,

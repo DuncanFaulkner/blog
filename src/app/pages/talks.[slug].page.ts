@@ -1,5 +1,5 @@
 import { MarkdownComponent, injectContent } from '@analogjs/content';
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { TalkAttributes } from '../models/talk-attributes';
 
@@ -12,7 +12,7 @@ import { TalkAttributes } from '../models/talk-attributes';
     <analog-markdown [content]="talk.content"></analog-markdown>
     }
   `,
-  imports: [AsyncPipe, NgIf, MarkdownComponent],
+  imports: [AsyncPipe, MarkdownComponent],
   styles: [
     `
       h2 {

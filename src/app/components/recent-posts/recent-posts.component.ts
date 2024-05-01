@@ -39,7 +39,7 @@ import { PreviewCardComponent } from '../preview-card/preview-card.component';
   styles: [],
 })
 export class RecentPostsComponent {
-  @Input() count: string = '0';
+  @Input() count = 0;
   content = inject(ContentService);
   posts$: Observable<any> | undefined;
 
