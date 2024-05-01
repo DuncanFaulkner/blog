@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import analog from '@analogjs/platform';
 import { defineConfig } from 'vite';
+import { extractRoutesToPrerender } from 'vite-prerender.utils';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -15,8 +16,8 @@ export default defineConfig(({ mode }) => ({
     analog({
       static: true,
       prerender: {
-        // routes: extractRoutesToPrerender(),
-        routes: ['/', '/blog', '/talks', '/portfolio'],
+        routes: extractRoutesToPrerender(),
+        // routes: ['/', '/blog', '/talks', '/portfolio'],
         sitemap: {
           host: 'https://anglebrackets.dev',
         },
