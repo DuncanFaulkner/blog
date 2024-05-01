@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  margin: 10px 0 20px;
+}
+
+a {
+  border-bottom: 0;
+  margin-right: 20px;
+}
+
+svg {
+  width: 40px;
+  fill: var(--color-secondary);
+  transition: fill 0.2s ease-in-out;
+}
+
+svg:hover {
+  fill: var(--color-accent);
+}
