@@ -6,4 +6,6 @@ categories: General
 tags:
 ---
 
-It's been a while coming, but finally starting to catch up on some items I've been meaning to workon for a while.
+It's been a while coming, but finally starting to catch up on some items I've been meaning to work on for a while.
+
+More details to follow.
