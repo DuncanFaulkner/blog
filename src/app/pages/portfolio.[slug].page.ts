@@ -1,15 +1,15 @@
 import { MarkdownComponent, injectContent } from '@analogjs/content';
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { BookAttributes } from '../models/book-attributes';
+import { PortfolioAttributes } from '../models';
 
 @Component({
   standalone: true,
   template: `
-    @if (book$ | async;as book) {
-    <h2>{{ book.attributes.title }}</h2>
-    <img src="images/{{ book.attributes.image }}" />
-    <analog-markdown [content]="book.content"></analog-markdown>
+    @if (portfolio$ | async;as portfolio) {
+    <h2>{{ portfolio.attributes.title }}</h2>
+    <img src="images/{{ portfolio.attributes.image }}" />
+    <analog-markdown [content]="portfolio.content"></analog-markdown>
     }
   `,
   imports: [AsyncPipe, MarkdownComponent],
@@ -30,9 +30,9 @@ import { BookAttributes } from '../models/book-attributes';
     `,
   ],
 })
-export default class SingleBookComponent {
-  readonly book$ = injectContent<BookAttributes>({
+export default class SinglePortfolioComponent {
+  readonly portfolio$ = injectContent<PortfolioAttributes>({
     param: 'slug',
-    subdirectory: 'books',
+    subdirectory: 'portfolio',
   });
 }

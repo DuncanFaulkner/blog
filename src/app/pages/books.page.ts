@@ -4,8 +4,8 @@ import { of } from 'rxjs';
 import { PageHeaderComponent } from '../components/page-header/page-header.component';
 import { PreviewCardComponent } from '../components/preview-card/preview-card.component';
 import { SortBooksByDate } from '../operators/sortBooksByDate';
-import { BookSlugPipe } from '../pipes/book-slug.pipe';
-import { BookSubtitlePipe } from '../pipes/book-subtitle.pipe';
+import { BookSlugPipe } from '../pipes/books-slug.pipe';
+import { BookSubtitlePipe } from '../pipes/books-subtitle.pipe';
 import { ImagePipe } from '../pipes/image.pipe';
 import { ContentService } from '../services/content.service';
 

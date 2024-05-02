@@ -5,23 +5,18 @@ import { PageHeaderComponent } from '../components/page-header/page-header.compo
 import { PillComponent } from '../components/pill/pill.component';
 import { PreviewCardComponent } from '../components/preview-card/preview-card.component';
 import { ImagePipe } from '../pipes/image.pipe';
+import { PortfolioSlugPipe } from '../pipes/portfolios-slug.pipe';
 import { ContentService } from '../services/content.service';
 
 @Component({
   standalone: true,
-  imports: [
-    PageHeaderComponent,
-    AsyncPipe,
-    PreviewCardComponent,
-    ImagePipe,
-    PillComponent,
-  ],
   template: `
     <blog-page-header>Portfolio</blog-page-header>
     @for (portfolio of portfolios$ | async; track portfolio.attributes.title) {
     <blog-preview-card
       [title]="portfolio.attributes.title"
       [imageUrl]="portfolio.attributes.image | image"
+      [linkUrl]="portfolio.slug | portfolioSlug"
     >
       <blog-pill>{{ portfolio.attributes.type }}</blog-pill>
       <p>{{ portfolio.attributes.description }}</p>
@@ -41,6 +36,14 @@ import { ContentService } from '../services/content.service';
         margin: 20px 0;
       }
     `,
+  ],
+  imports: [
+    PageHeaderComponent,
+    AsyncPipe,
+    PreviewCardComponent,
+    ImagePipe,
+    PillComponent,
+    PortfolioSlugPipe,
   ],
 })
 export default class PortfolioComponent {
