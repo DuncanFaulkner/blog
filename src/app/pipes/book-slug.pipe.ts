@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'talkSlug',
+  name: 'bookSlug',
   standalone: true,
 })
-export class TalkSlugPipe implements PipeTransform {
+export class BookSlugPipe implements PipeTransform {
   transform(value: string) {
-    return `/talks/${value}`;
+    return `/books/${value}`;
   }
 }

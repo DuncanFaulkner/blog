@@ -18,7 +18,9 @@ import { PostAttributes } from '../models/post-attributes';
       h2 {
         max-width: var(--article-width);
         margin: 160px auto 40px;
-        border-bottom: 8px solid var(--color-accent);
+        border-bottom: 8px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #ff66c4, #5170ff);
         padding-bottom: 20px;
       }
       img {

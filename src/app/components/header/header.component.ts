@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
       ><img src="/icons/anglebrackets.png" alt="logo"
     /></a>
     <ul>
+      <li><a href="/">Home</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="/talks">Talks</a></li>
+      <li><a href="/books">Books</a></li>
       <li><a href="/portfolio">Portfolio</a></li>
     </ul>
   </header>`,

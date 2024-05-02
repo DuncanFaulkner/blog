@@ -1,7 +1,7 @@
 import { MarkdownComponent, injectContent } from '@analogjs/content';
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { TalkAttributes } from '../models/talk-attributes';
+import { BookAttributes } from '../models/book-attributes';
 
 @Component({
   standalone: true,
@@ -31,8 +31,8 @@ import { TalkAttributes } from '../models/talk-attributes';
   ],
 })
 export default class SingleTalkComponent {
-  readonly talk$ = injectContent<TalkAttributes>({
+  readonly talk$ = injectContent<BookAttributes>({
     param: 'slug',
-    subdirectory: 'talks',
+    subdirectory: 'books',
   });
 }

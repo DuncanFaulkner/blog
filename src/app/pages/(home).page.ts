@@ -14,24 +14,27 @@ import { SocialMediaComponent } from '../components/social-media/social-media.co
   template: `
     <section class="main"></section>
     <section class="about">
-      <!-- <blog-control-buttons /> -->
-      <h1>👋🏻 Welcome!</h1>
+      <h1>👋🏻 Hello</h1>
       <p>
-        Hi there! I'm Duncan Faulkner, a passionate and experienced software
-        engineer who loves working with Angular. At TO DO!!!!, I tackle complex
-        and exciting challenges every day, using the latest technologies and
+        Hi there! I'm Duncan, I've been a software engineer for just over two
+        decades and I love working with Angular. I like to work on complex and
+        exciting challenges, while using the latest technologies and working to
         best practices.
       </p>
       <p>
-        But that's not all! I also enjoy sharing my knowledge and enthusiasm
-        with the Angular community. I co-organize the , where we host awesome
-        speakers and events. And sometimes, I get to be one of those speakers
-        myself! I've spoken at the meetup as well as about Angular topics, and I
-        always have a blast doing it.
+        Theres more! I also share my knowledge and enthusiasm with the Angular
+        community. I maintain
+        <a href="https://www.npmjs.com/package/@ngbracket/ngx-layout"
+          >&#64;ngbracket/ngx-layout</a
+        >
+        (formerly &#64;angular/flex-layout). I've written several short books on
+        Angular and Angular Material more details can be found in the
+        <a href="/books">Books</a> section, and I'm hoping to publish a book on
+        Angular later in the year.
       </p>
       <p>
-        If you want to know more about me or my work, feel free to contact me
-        anytime. I'd love to hear from you!
+        Please feel free to contact me if you want to know more about me or what
+        I'm working on. I'd love to hear from you!
       </p>
       <blog-social-media />
     </section>

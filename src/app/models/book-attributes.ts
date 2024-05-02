@@ -1,4 +1,4 @@
-export interface TalkAttributes {
+export interface BookAttributes {
   date: string;
   title: string;
   image: string;

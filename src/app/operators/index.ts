@@ -1,3 +1,3 @@
+export * from './sortBooksByDate';
 export * from './sortPostsByDate';
-export * from './sortTalksByDate';
 export * from './takeArray';

@@ -11,7 +11,7 @@
 
 :root {
   --color-primary: #14171f;
-  // --color-primary-opaque: rgba(199, 231, 13, 0.8);
+  --color-primary-opaque: rgba(20, 23, 31, 0.8);
   --color-secondary: #d3d3d3;
   --color-accent: #720fa0;
   --article-width: 95%;
@@ -44,13 +44,17 @@ body {
 }
 
 a {
-  color: var(--color-secondary);
+  color: var(--color-accent);
   text-decoration: none;
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #ff66c4, #5170ff);
 }
 
 a:hover {
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #5170ff, #ff66c4);
 }
 
 a.linkbtn {
@@ -79,6 +83,7 @@ h3 a {
   font-size: 2rem;
   font-weight: 500;
   line-height: 3.5rem;
+  color: white;
 }
 
 h1,

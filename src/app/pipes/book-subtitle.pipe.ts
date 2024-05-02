@@ -1,14 +1,14 @@
 import { ContentFile } from '@analogjs/content';
 import { DatePipe } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
-import { TalkAttributes } from '../models/talk-attributes';
+import { BookAttributes } from '../models/book-attributes';
 
 @Pipe({
-  name: 'talkSubtitle',
+  name: 'bookSubtitle',
   standalone: true,
 })
-export class TalkSubtitlePipe implements PipeTransform {
-  transform(value: ContentFile<TalkAttributes>): string {
+export class BookSubtitlePipe implements PipeTransform {
+  transform(value: ContentFile<BookAttributes>): string {
     const date = new DatePipe('en-US').transform(value.attributes.date);
 
     let retstr = `${date} | ${value.attributes.conference}`;

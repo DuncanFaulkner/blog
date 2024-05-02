@@ -6,14 +6,13 @@ import { ControlButtonsComponent } from '../control-buttons/control-buttons.comp
   selector: 'blog-preview-card',
   standalone: true,
   imports: [DatePipe, ControlButtonsComponent],
+
   template: ` <div
     class="wrapper"
     style="background-image: url({{ imageUrl }});"
   >
     <div class="overlay"></div>
     <div class="content">
-      <!-- <blog-control-buttons /> -->
-
       @if (date) {
       <p>{{ date | date }}</p>
       } @if (linkUrl) {

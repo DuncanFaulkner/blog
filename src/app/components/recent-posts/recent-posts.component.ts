@@ -1,4 +1,4 @@
-import { AsyncPipe, DatePipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { Component, Input, inject } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { sortPostsByDate, takeArray } from '../../operators';
@@ -12,8 +12,6 @@ import { PreviewCardComponent } from '../preview-card/preview-card.component';
   selector: 'blog-recent-posts',
   standalone: true,
   imports: [
-    NgForOf,
-    NgIf,
     AsyncPipe,
     PreviewCardComponent,
     DatePipe,
