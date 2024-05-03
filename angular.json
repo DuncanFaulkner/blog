@@ -3,9 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blog": {
+    "my-app": {
       "projectType": "application",
-      "root": "",
+      "root": ".",
       "sourceRoot": "src",
       "prefix": "blog",
       "architect": {
@@ -32,16 +32,16 @@
           "builder": "@analogjs/platform:vite-dev-server",
           "defaultConfiguration": "development",
           "options": {
-            "buildTarget": "blog:build",
+            "buildTarget": "my-app:build",
             "port": 5173
           },
           "configurations": {
             "development": {
-              "buildTarget": "blog:build:development",
+              "buildTarget": "my-app:build:development",
               "hmr": true
             },
             "production": {
-              "buildTarget": "blog:build:production"
+              "buildTarget": "my-app:build:production"
             }
           }
         },
