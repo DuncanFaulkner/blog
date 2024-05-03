@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      static: true,
+      static: false,
       prerender: {
         // routes: extractRoutesToPrerender(),
         routes: ['/', '/blog', '/books', '/portfolio'],
