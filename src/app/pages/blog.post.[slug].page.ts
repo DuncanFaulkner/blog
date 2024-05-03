@@ -1,7 +1,7 @@
 import { MarkdownComponent, injectContent } from '@analogjs/content';
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { PostAttributes } from '../models/post-attributes';
+import { PostAttributes } from '../models';
 
 @Component({
   standalone: true,

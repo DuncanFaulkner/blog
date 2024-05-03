@@ -1,7 +1,7 @@
 import { MarkdownComponent, injectContent } from '@analogjs/content';
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { BookAttributes } from '../models/book-attributes';
+import { BookAttributes } from '../models';
 
 @Component({
   standalone: true,

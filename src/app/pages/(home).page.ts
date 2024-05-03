@@ -1,16 +1,11 @@
 import { Component } from '@angular/core';
-import { ControlButtonsComponent } from '../components/control-buttons/control-buttons.component';
 import { RecentPostsComponent } from '../components/recent-posts/recent-posts.component';
 import { SocialMediaComponent } from '../components/social-media/social-media.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'blog-home',
   standalone: true,
-  imports: [
-    ControlButtonsComponent,
-    RecentPostsComponent,
-    SocialMediaComponent,
-  ],
+  imports: [RecentPostsComponent, SocialMediaComponent],
   template: `
     <section class="main"></section>
     <section class="about">
