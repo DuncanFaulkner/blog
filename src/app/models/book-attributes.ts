@@ -2,7 +2,7 @@ export interface BookAttributes {
   date: string;
   title: string;
   image: string;
-  conference: string;
-  location?: string;
+  categories: string;
+  tags: string;
   abstract: string;
 }

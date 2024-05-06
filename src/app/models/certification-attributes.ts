@@ -1,4 +1,4 @@
-export interface PortfolioAttributes {
+export interface CertificationAttributes {
   date: string;
   title: string;
   subtitle: string;

@@ -1,18 +1,25 @@
 import { MarkdownComponent, injectContent } from '@analogjs/content';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { PillComponent } from '../components/pill/pill.component';
 import { BookAttributes } from '../models';
 
 @Component({
   standalone: true,
+  imports: [AsyncPipe, DatePipe, PillComponent, MarkdownComponent],
   template: `
     @if (book$ | async;as book) {
     <h2>{{ book.attributes.title }}</h2>
+    <p>{{ book.attributes.date | date : 'yyyy-MM-dd' }}</p>
     <img src="images/{{ book.attributes.image }}" />
     <analog-markdown [content]="book.content"></analog-markdown>
+    <div>
+      <blog-pill>{{ book.attributes.tags }}</blog-pill>
+    </div>
+    <div>Categories: {{ book.attributes.categories }}</div>
     }
   `,
-  imports: [AsyncPipe, MarkdownComponent],
+
   styles: [
     `
       h2 {
@@ -21,7 +28,14 @@ import { BookAttributes } from '../models';
         border-bottom: 8px solid var(--color-accent);
         padding-bottom: 20px;
       }
-
+      div {
+        max-width: var(--article-width);
+        margin: 0 auto 40px;
+      }
+      p {
+        max-width: var(--article-width);
+        margin: 0 auto 40px;
+      }
       img {
         max-width: var(--article-width);
         margin: 0 auto 40px;

@@ -1,6 +1,8 @@
 export interface PostAttributes {
-  title: string;
-  image: string;
   date: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  categories: string;
   tags: string;
 }

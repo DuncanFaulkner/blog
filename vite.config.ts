@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
       static: false,
       prerender: {
         // routes: extractRoutesToPrerender(),
-        routes: ['/', '/blog', '/books', '/portfolio'],
+        routes: ['/', '/blog', '/books', '/certifications', '/portfolio'],
         sitemap: {
           host: 'https://anglebrackets.dev',
         },

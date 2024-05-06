@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
       <li><a href="/">Home</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/books">Books</a></li>
+      <li><a href="/certifications">Certifications</a></li>
       <li><a href="/portfolio">Portfolio</a></li>
     </ul>
   </header>`,

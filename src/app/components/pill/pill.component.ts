@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
       span {
         padding: 10px 20px;
         margin-right: 20px;
+        border-radius: 40px;
         background-color: var(--color-accent);
         color: white;
       }

@@ -1,7 +1,12 @@
 import { injectContentFiles } from '@analogjs/content';
 import { InjectContentFilesFilterFunction } from '@analogjs/content/lib/inject-content-files';
 import { Injectable } from '@angular/core';
-import { BookAttributes, PortfolioAttributes, PostAttributes } from '../models';
+import {
+  BookAttributes,
+  CertificationAttributes,
+  PortfolioAttributes,
+  PostAttributes,
+} from '../models';
 
 @Injectable({
   providedIn: 'root',
@@ -18,4 +23,9 @@ export class ContentService {
   private readonly portfolioFilterFn: InjectContentFilesFilterFunction<PortfolioAttributes> =
     (contentFile) => !!contentFile.filename.includes('/src/content/portfolio/');
   readonly portfolio = injectContentFiles(this.portfolioFilterFn);
+
+  private readonly certificationFilterFn: InjectContentFilesFilterFunction<CertificationAttributes> =
+    (contentFile) =>
+      !!contentFile.filename.includes('/src/content/certifications/');
+  readonly certification = injectContentFiles(this.certificationFilterFn);
 }

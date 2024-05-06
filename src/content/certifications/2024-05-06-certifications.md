@@ -1,10 +1,10 @@
 ---
 date: 2024-05-02
-title: Portfolio
-subtitle: portfolio subtitle
+title: Certifications
+subtitle: Certifications subtitle
 image: anglebrackets-logo.svg
 type: WordPress
-description: Blair is a blogger and CBD advocate that was looking for a fresh start on a new design.  This was a custom WordPress theme designed with her writing and travel in mind.
+description: CertificationsCertificationsCertificationsCertificationsCertifications
 url: https://blairmeeks.com/
 ---
 

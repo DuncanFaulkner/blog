@@ -11,18 +11,22 @@ import { ContentService } from '../services/content.service';
   standalone: true,
 
   template: `
-    <blog-page-header>Portfolio</blog-page-header>
-    @for (portfolio of portfolios$ | async; track portfolio.attributes.title) {
+    <blog-page-header>Certifications</blog-page-header>
+    @for (certification of certifications$ | async; track
+    certification.attributes.title) {
     <blog-preview-card
-      [title]="portfolio.attributes.title"
-      [subtitle]="portfolio.attributes.subtitle"
-      [imageUrl]="portfolio.attributes.image | image"
+      [title]="certification.attributes.title"
+      [subtitle]="certification.attributes.subtitle"
+      [imageUrl]="certification.attributes.image | image"
     >
-      <blog-pill>{{ portfolio.attributes.type }}</blog-pill>
-      <p>{{ portfolio.attributes.description }}</p>
+      <blog-pill>{{ certification.attributes.type }}</blog-pill>
+      <p>{{ certification.attributes.description }}</p>
 
-      @if (portfolio.attributes.url) {
-      <a class="linkbtn" href="{{ portfolio.attributes.url }}" target="_blank"
+      @if (certification.attributes.url) {
+      <a
+        class="linkbtn"
+        href="{{ certification.attributes.url }}"
+        target="_blank"
         >View Project</a
       >
       }
@@ -45,7 +49,7 @@ import { ContentService } from '../services/content.service';
     ImagePipe,
   ],
 })
-export default class PortfolioComponent {
+export default class CertificationComponent {
   private content = inject(ContentService);
-  portfolios$ = of(this.content.portfolio);
+  certifications$ = of(this.content.certification);
 }

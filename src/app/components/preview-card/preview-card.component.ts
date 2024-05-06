@@ -1,28 +1,27 @@
 import { DatePipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { ControlButtonsComponent } from '../control-buttons/control-buttons.component';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'blog-preview-card',
   standalone: true,
-  imports: [DatePipe, ControlButtonsComponent],
+  imports: [DatePipe],
 
   template: ` <div
     class="wrapper"
-    style="background-image: url({{ imageUrl }});"
+    style="background-image: url({{ imageUrl() }});"
   >
     <div class="overlay"></div>
     <div class="content">
-      @if (date) {
-      <p>{{ date | date }}</p>
-      } @if (linkUrl) {
+      @if (date()) {
+      <p>{{ date() | date }}</p>
+      } @if (linkUrl()) {
       <h3>
-        <a href="{{ linkUrl }}">{{ title }}</a>
+        <a href="{{ linkUrl() }}">{{ title() }}</a>
       </h3>
       } @else {
-      <h3>{{ title }}</h3>
-      } @if (subtitle) {
-      <h4>{{ subtitle }}</h4>
+      <h3>{{ title() }}</h3>
+      } @if (subtitle()) {
+      <h4>{{ subtitle() }}</h4>
       }
       <p>
         <ng-content></ng-content>
@@ -32,9 +31,9 @@ import { ControlButtonsComponent } from '../control-buttons/control-buttons.comp
   styleUrl: './preview-card.component.scss',
 })
 export class PreviewCardComponent {
-  @Input() linkUrl: string | undefined;
-  @Input({ required: true }) imageUrl: string | undefined;
-  @Input({ required: true }) title: string | undefined;
-  @Input() subtitle: string | undefined | null;
-  @Input() date: string | undefined;
+  linkUrl = input<string | undefined>();
+  imageUrl = input.required<string | undefined>();
+  title = input.required<string | undefined>();
+  subtitle = input<string | undefined | null>();
+  date = input<string | undefined | null>();
 }

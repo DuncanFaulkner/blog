@@ -24,7 +24,8 @@ import { PreviewCardComponent } from '../preview-card/preview-card.component';
     <blog-preview-card
       [title]="post.attributes.title"
       [imageUrl]="post.attributes.image | image"
-      [subtitle]="post.attributes.date | date"
+      [subtitle]="post.attributes.subtitle"
+      [date]="post.attributes.date | date"
       [linkUrl]="post.slug | blogSlug"
     >
       @if (post.attributes.tags) { @for (tag of post.attributes.tags.split(',');
