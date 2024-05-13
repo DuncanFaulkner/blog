@@ -3,6 +3,7 @@ import { PageHeaderComponent } from '../components/page-header/page-header.compo
 import { RecentPostsComponent } from '../components/recent-posts/recent-posts.component';
 
 @Component({
+  selector: 'blog-page',
   standalone: true,
   imports: [PageHeaderComponent, RecentPostsComponent],
   template: `

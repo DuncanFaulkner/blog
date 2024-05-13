@@ -12,10 +12,10 @@ import { SocialMediaComponent } from '../components/social-media/social-media.co
       <h1>👋🏻 Hello</h1>
       <p>
         Hi there! I'm Duncan, I've been a software engineer for just over two
-        decades and for the last eight years I've working with Angular. I've
-        written several short books on Angular and Angular Material more details
-        can be found in the <a href="/books">Books</a> section, and I'm hoping
-        to publish a book on Angular later in the year.
+        decades and for the last eight years I've been working with Angular.
+        I've written several short books on Angular and Angular Material more
+        details can be found in the <a href="/books">Books</a> section, and I'm
+        hoping to publish a book on Angular later in the year.
       </p>
       <p>
         There's more! I also like to share my knowledge and enthusiasm with the

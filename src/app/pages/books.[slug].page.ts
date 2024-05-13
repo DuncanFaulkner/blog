@@ -5,6 +5,7 @@ import { PillComponent } from '../components/pill/pill.component';
 import { BookAttributes } from '../models';
 
 @Component({
+  selector: 'book-post',
   standalone: true,
   imports: [AsyncPipe, DatePipe, PillComponent, MarkdownComponent],
   template: `
@@ -44,7 +45,7 @@ import { BookAttributes } from '../models';
     `,
   ],
 })
-export default class SingleBookComponent {
+export default class BookListComponent {
   readonly book$ = injectContent<BookAttributes>({
     param: 'slug',
     subdirectory: 'books',

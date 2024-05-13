@@ -10,6 +10,7 @@ import { ImagePipe } from '../pipes/image.pipe';
 import { ContentService } from '../services/content.service';
 
 @Component({
+  selector: 'book-post',
   standalone: true,
   imports: [
     PageHeaderComponent,

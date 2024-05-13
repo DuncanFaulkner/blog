@@ -6,6 +6,7 @@ import { PostAttributes } from '../models';
 
 @Component({
   standalone: true,
+  selector: 'blog-post',
   imports: [AsyncPipe, DatePipe, MarkdownComponent, PillComponent],
   template: `
     @if (post$ | async; as post) {
@@ -46,7 +47,7 @@ import { PostAttributes } from '../models';
     `,
   ],
 })
-export default class PostPageComponent {
+export default class BlogPostComponent {
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
     subdirectory: 'posts',

@@ -8,8 +8,15 @@ import { ImagePipe } from '../pipes/image.pipe';
 import { ContentService } from '../services/content.service';
 
 @Component({
+  selector: 'portfolio-page',
   standalone: true,
-
+  imports: [
+    AsyncPipe,
+    PageHeaderComponent,
+    PreviewCardComponent,
+    PillComponent,
+    ImagePipe,
+  ],
   template: `
     <blog-page-header>Portfolio</blog-page-header>
     @for (portfolio of portfolios$ | async; track portfolio.attributes.title) {
@@ -36,13 +43,6 @@ import { ContentService } from '../services/content.service';
         margin: 20px 0;
       }
     `,
-  ],
-  imports: [
-    AsyncPipe,
-    PageHeaderComponent,
-    PreviewCardComponent,
-    PillComponent,
-    ImagePipe,
   ],
 })
 export default class PortfolioComponent {

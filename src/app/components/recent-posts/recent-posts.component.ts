@@ -45,7 +45,7 @@ export class RecentPostsComponent {
   ngOnInit() {
     this.posts$ = of(this.content.blogs).pipe(
       sortPostsByDate(),
-      takeArray(+this.count)
+      takeArray(this.count)
     );
   }
 }
