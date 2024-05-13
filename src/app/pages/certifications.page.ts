@@ -37,7 +37,7 @@ import { ContentService } from '../services/content.service';
         skills as a new Angular Developer.
       </p>
       <div class="logo">
-        <img src="src/assets/images/cert-level-1.png" alt="level 1 logo" />
+        <img src="images/cert-level-1.png" alt="level 1 logo" />
       </div>
       <ul>
         <li>Level 1: Junior developer</li>
@@ -64,7 +64,7 @@ import { ContentService } from '../services/content.service';
         careers.
       </p>
       <div class="logo">
-        <img src="src/assets/images/cert-level-2.png" alt="level 2 logo" />
+        <img src="images/cert-level-2.png" alt="level 2 logo" />
       </div>
       <ul>
         <li>Level 2: Intermediate developer</li>
@@ -91,7 +91,7 @@ import { ContentService } from '../services/content.service';
         careers.
       </p>
       <div class="logo">
-        <img src="src/assets/images/cert-level-3.png" alt="level 3 logo" />
+        <img src="images/cert-level-3.png" alt="level 3 logo" />
       </div>
       <ul>
         <li>Level 3: Expert developer</li>
@@ -118,7 +118,7 @@ import { ContentService } from '../services/content.service';
         </li>
       </ul>
       <div class="logo">
-        <img src="src/assets/images/certificate.webp" alt="level 3 logo" />
+        <img src="images/certificate.webp" alt="level 3 logo" />
       </div>
     </section>
   `,
