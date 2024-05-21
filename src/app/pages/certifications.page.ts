@@ -36,9 +36,16 @@ import { ContentService } from '../services/content.service';
         showcase their skills. This certification exam is to validate your
         skills as a new Angular Developer.
       </p>
-      <div class="logo">
-        <img src="images/cert-level-1.png" alt="level 1 logo" />
+      <div class="logo price-tag">
+        <div>
+          <img src="images/cert-level-1.png" alt="level 1 logo" />
+        </div>
+        <div>
+          <img src="images/level1.png" alt="level 1 price" />
+        </div>
       </div>
+
+      <!--  style="position:absolute; z-index:200; left:650px; top:290px; transform:rotate(23deg)" -->
       <ul>
         <li>Level 1: Junior developer</li>
         <li>Exam time: 25 minutes</li>
@@ -47,7 +54,7 @@ import { ContentService } from '../services/content.service';
       </ul>
       <br />
       <a class="linkbtn" href="https://bit.ly/ng-cert-1" target="_blank"
-        >Take Exam</a
+        >Enroll</a
       >
       <br /><br />
       <hr />
@@ -63,8 +70,13 @@ import { ContentService } from '../services/content.service';
         Angular developers and help them progress to the next step in their
         careers.
       </p>
-      <div class="logo">
-        <img src="images/cert-level-2.png" alt="level 2 logo" />
+      <div class="logo price-tag">
+        <div>
+          <img src="images/cert-level-2.png" alt="level 2 logo" />
+        </div>
+        <div>
+          <img src="images/level2.png" alt="level 2 price" />
+        </div>
       </div>
       <ul>
         <li>Level 2: Intermediate developer</li>
@@ -74,7 +86,7 @@ import { ContentService } from '../services/content.service';
       </ul>
       <br />
       <a class="linkbtn" href="https://bit.ly/ng-cert-2" target="_blank"
-        >Take Exam</a
+        >Enroll</a
       >
       <br /><br />
       <hr />
@@ -90,8 +102,13 @@ import { ContentService } from '../services/content.service';
         Angular developers and help them progress to the next step in their
         careers.
       </p>
-      <div class="logo">
-        <img src="images/cert-level-3.png" alt="level 3 logo" />
+      <div class="logo price-tag">
+        <div>
+          <img src="images/cert-level-3.png" alt="level 3 logo" />
+        </div>
+        <div>
+          <img src="images/level3.png" alt="level 3 price" />
+        </div>
       </div>
       <ul>
         <li>Level 3: Expert developer</li>
@@ -101,7 +118,7 @@ import { ContentService } from '../services/content.service';
       </ul>
       <br />
       <a class="linkbtn" href="https://bit.ly/ng-cert-3" target="_blank"
-        >Take Exam</a
+        >Enroll</a
       >
       <br /><br />
       <hr />
@@ -156,6 +173,11 @@ import { ContentService } from '../services/content.service';
         text-transform: uppercase;
       }
       .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .price-tag {
         display: flex;
         flex-direction: row;
         justify-content: center;
