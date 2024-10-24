@@ -1,3 +1,12 @@
+---
+date: 2024-10-24
+title: Introduction to Vitest and Angular
+subtitle:
+image: anglebrackets-logo.svg
+categories: unit testing
+tags: technology
+---
+
 # Introduction to Vitest and Angular
 
 The Angular team deprecated Karma a few versions ago and are currently working on ways to provide an alternative 3rd party unit testing frameworks. Currently the options talked about so far are Web Test Runner (likely to be the default), this is a browser based unit test runner similar in many ways to Karma. The other option being discussed is Jest, this can be installed now but can be a little tricky sometimes to get set up and some known issues when Angular is set up to use ES builds (the default in Angular 18 onward).
