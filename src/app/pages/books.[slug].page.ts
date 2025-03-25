@@ -5,10 +5,9 @@ import { PillComponent } from '../components/pill/pill.component';
 import { BookAttributes } from '../models';
 
 @Component({
-  selector: 'book-post',
-  standalone: true,
-  imports: [AsyncPipe, DatePipe, PillComponent, MarkdownComponent],
-  template: `
+    selector: 'book-post',
+    imports: [AsyncPipe, DatePipe, PillComponent, MarkdownComponent],
+    template: `
     @if (book$ | async;as book) {
     <h2>{{ book.attributes.title }}</h2>
     <p>{{ book.attributes.date | date : 'yyyy-MM-dd' }}</p>
@@ -20,9 +19,8 @@ import { BookAttributes } from '../models';
     <div>Categories: {{ book.attributes.categories }}</div>
     }
   `,
-
-  styles: [
-    `
+    styles: [
+        `
       h2 {
         max-width: var(--article-width);
         margin: 160px auto 40px;
@@ -43,7 +41,7 @@ import { BookAttributes } from '../models';
         display: block;
       }
     `,
-  ],
+    ]
 })
 export default class BookListComponent {
   readonly book$ = injectContent<BookAttributes>({

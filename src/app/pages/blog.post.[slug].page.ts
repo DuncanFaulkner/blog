@@ -5,10 +5,9 @@ import { PillComponent } from '../components/pill/pill.component';
 import { PostAttributes } from '../models';
 
 @Component({
-  standalone: true,
-  selector: 'blog-post',
-  imports: [AsyncPipe, DatePipe, MarkdownComponent, PillComponent],
-  template: `
+    selector: 'blog-post',
+    imports: [AsyncPipe, DatePipe, MarkdownComponent, PillComponent],
+    template: `
     @if (post$ | async; as post) {
     <h2>{{ post.attributes.title }}</h2>
     <p>{{ post.attributes.date | date : 'yyyy-MM-dd' }}</p>
@@ -21,8 +20,8 @@ import { PostAttributes } from '../models';
     <div>Categories: {{ post.attributes.categories }}</div>
     }
   `,
-  styles: [
-    `
+    styles: [
+        `
       h2 {
         max-width: var(--article-width);
         margin: 160px auto 40px;
@@ -45,7 +44,7 @@ import { PostAttributes } from '../models';
         display: block;
       }
     `,
-  ],
+    ]
 })
 export default class BlogPostComponent {
   readonly post$ = injectContent<PostAttributes>({

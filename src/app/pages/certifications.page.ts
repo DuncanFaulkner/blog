@@ -11,16 +11,7 @@ import { ContentService } from '../services/content.service';
 
 @Component({
   selector: 'certification-page',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    PageHeaderComponent,
-    PreviewCardComponent,
-    SocialMediaComponent,
-    RecentPostsComponent,
-    PillComponent,
-    ImagePipe,
-  ],
+  imports: [],
   template: `
     <section class="main"></section>
     <section class="certs">
