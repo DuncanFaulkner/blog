@@ -2,11 +2,9 @@ import { DatePipe } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'blog-preview-card',
-  standalone: true,
-  imports: [DatePipe],
-
-  template: ` <div
+    selector: 'blog-preview-card',
+    imports: [DatePipe],
+    template: ` <div
     class="wrapper"
     style="background-image: url({{ imageUrl() }});"
   >
@@ -28,7 +26,7 @@ import { Component, input } from '@angular/core';
       </p>
     </div>
   </div>`,
-  styleUrl: './preview-card.component.scss',
+    styleUrl: './preview-card.component.scss'
 })
 export class PreviewCardComponent {
   linkUrl = input<string | undefined>();

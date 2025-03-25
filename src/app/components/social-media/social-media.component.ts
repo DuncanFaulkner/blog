@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'blog-social-media',
-  standalone: true,
-  imports: [],
-  template: ` <a href="https://twitter.com/duncanfaulkner" target="_blank">
+    selector: 'blog-social-media',
+    imports: [],
+    template: ` <a href="https://twitter.com/duncanfaulkner" target="_blank">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         data-name="Layer 1"
@@ -28,6 +27,6 @@ import { Component } from '@angular/core';
         ></path>
       </svg>
     </a>`,
-  styleUrls: ['./social-media.component.scss'],
+    styleUrls: ['./social-media.component.scss']
 })
 export class SocialMediaComponent {}

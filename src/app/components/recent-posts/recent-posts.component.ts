@@ -9,17 +9,16 @@ import { PillComponent } from '../pill/pill.component';
 import { PreviewCardComponent } from '../preview-card/preview-card.component';
 
 @Component({
-  selector: 'blog-recent-posts',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    PreviewCardComponent,
-    DatePipe,
-    ImagePipe,
-    PillComponent,
-    BlogSlugPipe,
-  ],
-  template: `
+    selector: 'blog-recent-posts',
+    imports: [
+        AsyncPipe,
+        PreviewCardComponent,
+        DatePipe,
+        ImagePipe,
+        PillComponent,
+        BlogSlugPipe,
+    ],
+    template: `
     @for (post of posts$ | async; track post.attributes.title) {
     <blog-preview-card
       [title]="post.attributes.title"
@@ -35,7 +34,7 @@ import { PreviewCardComponent } from '../preview-card/preview-card.component';
     </blog-preview-card>
     }
   `,
-  styles: [],
+    styles: []
 })
 export class RecentPostsComponent {
   @Input() count = 0;

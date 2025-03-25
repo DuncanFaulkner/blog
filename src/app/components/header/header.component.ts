@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'blog-header',
-  standalone: true,
-  imports: [],
-  template: `<header>
+    selector: 'blog-header',
+    imports: [],
+    template: `<header>
     <a style="border-bottom: 0" href="/"
       ><img src="/icons/anglebrackets.png" alt="logo"
     /></a>
@@ -16,6 +15,6 @@ import { Component } from '@angular/core';
       <li><a href="/portfolio">Portfolio</a></li>
     </ul>
   </header>`,
-  styleUrl: './header.component.scss',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {}

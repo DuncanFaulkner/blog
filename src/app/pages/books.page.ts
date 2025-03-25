@@ -10,18 +10,17 @@ import { ImagePipe } from '../pipes/image.pipe';
 import { ContentService } from '../services/content.service';
 
 @Component({
-  selector: 'book-post',
-  standalone: true,
-  imports: [
-    PageHeaderComponent,
-    AsyncPipe,
-    PreviewCardComponent,
-    DatePipe,
-    ImagePipe,
-    BookSubtitlePipe,
-    BookSlugPipe,
-  ],
-  template: `
+    selector: 'book-post',
+    imports: [
+        PageHeaderComponent,
+        AsyncPipe,
+        PreviewCardComponent,
+        DatePipe,
+        ImagePipe,
+        BookSubtitlePipe,
+        BookSlugPipe,
+    ],
+    template: `
     <blog-page-header>Books</blog-page-header>
     @for (book of books$ | async; track book.attributes.title) {
     <blog-preview-card
@@ -33,7 +32,7 @@ import { ContentService } from '../services/content.service';
       {{ book.attributes.abstract }}
     </blog-preview-card>
     }
-  `,
+  `
 })
 export default class BooksComponent {
   private content = inject(ContentService);

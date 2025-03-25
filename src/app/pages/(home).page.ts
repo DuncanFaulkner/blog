@@ -3,10 +3,9 @@ import { RecentPostsComponent } from '../components/recent-posts/recent-posts.co
 import { SocialMediaComponent } from '../components/social-media/social-media.component';
 
 @Component({
-  selector: 'blog-home',
-  standalone: true,
-  imports: [RecentPostsComponent, SocialMediaComponent],
-  template: `
+    selector: 'blog-home',
+    imports: [RecentPostsComponent, SocialMediaComponent],
+    template: `
     <section class="main"></section>
     <section class="about">
       <h1>👋🏻 Hello</h1>
@@ -40,8 +39,8 @@ import { SocialMediaComponent } from '../components/social-media/social-media.co
       <a href="/blog" class="linkbtn">See All Posts</a>
     </section>
   `,
-  styles: [
-    `
+    styles: [
+        `
       section.main {
         min-height: 20vh;
         background-size: cover;
@@ -74,6 +73,6 @@ import { SocialMediaComponent } from '../components/social-media/social-media.co
         margin: 0 auto 20px;
       }
     `,
-  ],
+    ]
 })
 export default class HomeComponent {}
